@@ -4,11 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [heading, setHeading] = useState("Magnificent Monkeys");
+
+  const handleClick = ()=> {
+       setHeading("Radical Rhinos");
+  }
 
   return (
     <>
-      <h1>Our first test</h1>
+      <button onClick={handleClick}>
+        Click me
+      </button>
+      <h1>{heading}</h1>
     </>
   )
 }
